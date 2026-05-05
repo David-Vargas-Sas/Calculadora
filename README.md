@@ -6,15 +6,7 @@ SGDEA es una arquitectura basada en microservicios Spring Boot para gestionar mo
 
 El objetivo principal es separar responsabilidades por dominio, mantener una estructura de paquetes consistente y permitir integracion entre servicios mediante un GraphQL Gateway.
 
-## 2. Microservicios
-
-| Servicio | Puerto | Responsabilidad | Base de datos |
-| --- | ---: | --- | --- |
-| `sgdea` | `9090` | Gestion de empresas | `sgdea_master` |
-| `users` | `9091` | Gestion de usuarios | `sgdea_users` |
-| `gateway` | `9080` | Integracion GraphQL entre servicios | No usa base de datos |
-
-## 3. Tecnologias Principales
+## 2. Tecnologias Principales
 
 | Tecnologia | Uso |
 | --- | --- |
@@ -33,7 +25,7 @@ El objetivo principal es separar responsabilidades por dominio, mantener una est
 | MinIO | Base para almacenamiento futuro de archivos |
 | MapStruct | Base para mapeos futuros |
 
-## 4. Arquitectura General
+## 3. Arquitectura General
 
 ```text
 Cliente / Frontend / Postman
@@ -58,7 +50,7 @@ Gateway :9080
         +-- users :9091/graphql
 ```
 
-## 5. Estructura De Paquetes
+## 4. Estructura De Paquetes
 
 Cada microservicio de dominio debe seguir esta estructura:
 
@@ -111,7 +103,7 @@ com.api.users
 └── UsersApplication.java
 ```
 
-## 6. Responsabilidad De Cada Capa
+## 5. Responsabilidad De Cada Capa
 
 ### Entity
 
